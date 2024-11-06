@@ -11,8 +11,11 @@ import {
   Legalguides,
 } from "./Navbar";
 
+// Set the basename only in production for GitHub Pages
+const basename = process.env.NODE_ENV === "production" ? "/E-Marketplace_LSP" : "";
+
 ReactDOM.render(
-  <Router>
+  <Router basename = {basename}>
     <Routes>
       <Route path="/" element={<>
           <Navbar />
